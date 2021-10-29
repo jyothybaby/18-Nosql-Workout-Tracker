@@ -13,8 +13,17 @@ router.post("/api/workouts", ({body}, res) => {
     });
 } );
     
+// Getting all workout
 
-
+router.get("/api/workouts", (req, res) => {
+    db.find({})
+    .then(data => {
+        res.json(data);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
+} );
 
 
 module.exports = router;
