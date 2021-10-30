@@ -43,7 +43,7 @@ router.put("/api/workouts/:id",({body, params }, res) => {
 });
 
 // Showing by range
-app.get("/api/workouts/range", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
     db.find({}).sort( { "day": -1 }).limit(7)
     .then(data => {
         res.json(data); 
