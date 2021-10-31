@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const db = require("../models/Workout.js");
+const Workout = require("../models/Workout.js");
 
 //Creating a new workout
 
 router.post("/api/workouts", async ({body}, res) => {
-    db.create(body)
+    Workout.create(body)
     .then(data => {
         res.json(data);
     })
@@ -16,7 +16,7 @@ router.post("/api/workouts", async ({body}, res) => {
 // Getting all workout
 
 router.get("/api/workouts", (req, res) => {
-    db.find({})
+    Workout.find({})
     .then(data => {
         res.json(data);
     })
@@ -28,7 +28,7 @@ router.get("/api/workouts", (req, res) => {
 //Update a workout by id
 
 router.put("/api/workouts/:id",({body, params }, res) => {
-    db.findByIdAndUpdate(
+    Workout.findByIdAndUpdate(
         params.id,
         {$push: {exercises: body}},
         { new: true, runValidators: true }
@@ -44,7 +44,7 @@ router.put("/api/workouts/:id",({body, params }, res) => {
 
 // Showing by range
 router.get("/api/workouts/range", (req, res) => {
-    db.find({}).sort( { "day": -1 }).limit(7)
+    Workout.find({}).sort( { "day": -1 }).limit(7)
     .then(data => {
         res.json(data); 
     })
