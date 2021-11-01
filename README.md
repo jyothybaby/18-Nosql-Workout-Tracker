@@ -10,7 +10,7 @@
     
 <b>Links for the project:</b><br>
 1. GitHub repository URL: https://github.com/jyothybaby/18-Nosql-Workout-Tracker
-2. Heroku App:  https://stormy-cliffs-15435.herokuapp.com
+2. Heroku App: https://workouttracker-jb.herokuapp.com/
 
 Screenshots:
 ![screen-1](https://github.com/jyothybaby/18-Nosql-Workout-Tracker/blob/main/screenshots/Capture1.JPG)<br>

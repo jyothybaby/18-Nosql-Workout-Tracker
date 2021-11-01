@@ -1,7 +1,7 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "18-Nosql-Workout-Tracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Workout App",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
