@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 //Database name is fitness
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnessTracker_db",
  {
     useNewUrlParser: true,
     useUnifiedTopology: true,
